@@ -1,0 +1,506 @@
+
+/* common setup*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: #ffffff;
+    color: #111010;
+    font-style: sans-serif;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/*Header part*/
+
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/hero.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-text-box{
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1,h2,h3{
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1{
+    margin-top: 0;
+    color: #ffffff;
+    font-size: 200%;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+}
+
+h2{
+    font-size: 180%;
+    word-spacing: 2px;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+h2::after{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100px;
+    background-color: #cf6417;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+h3{
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+section{
+    padding: 80px 0;
+}
+/* buttons */
+
+.btn:link,
+.btn:visited,
+input[type=submit]{
+    display: inline-block;
+    padding: 10px 30px;
+    border: 1px solid #e67e22;
+    border-radius: 200px;
+    font-weight: 300;
+    text-decoration: none;
+    transition: background-color 1s, border 1s, color 1s;
+}
+
+.btn-hungry:link,
+.btn-hungry:visited{
+    background-color: #e67e22;
+    color: #ffffff; 
+}
+
+.btn-showmore:link,
+.btn-showmore:visited{
+    color: #e67e22;
+    margin-left: 10px;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover{
+    background-color: #cf6417;
+}
+
+.btn-hungry:hover,
+.btn-hungry:active,
+input[type=submit]{
+    border-color: #cf6417;
+}
+
+.btn-showmore:hover,
+.btn-showmore:active{
+    border-color: #cf6417;
+    color: #ffffff;
+}
+
+/*logo and nav bar*/
+.logo{
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;   
+}
+
+.main-nav{
+    float: right;
+    list-style: none;
+}
+
+.main-nav li{
+    display: inline-block;
+    margin-left: 40px;  
+    margin-top: 55px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited{
+    text-decoration: none;
+    font-size: 80%;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 200;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 1px solid #cf6417;
+    padding-bottom: 8px;
+}
+
+/* feature list paragraphs*/
+.long-copy{
+    width: 70%;
+    letter-spacing: 1px;
+    line-height: 145%;
+    margin-left:15%;
+    margin-bottom: 20px;
+}
+
+.box{
+   
+}
+
+.box p{
+    font-size: 90%;
+    line-height: 145%;
+}
+
+/*icons*/
+
+.iconbig{
+    font-size: 350%;
+    display: block;
+    color: #cf6417;
+    margin: 10px;
+}
+
+/*meals section*/
+
+.section-meals{
+    padding: 0;
+}
+
+.meals-showcase{
+    list-style: none;
+    width: 100%;
+}
+
+.meals-showcase li{
+    display: block;
+    float: left;
+    width: 25%;
+    overflow: hidden;
+}
+
+.meal-photo{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    background-color: #000000;  
+}
+
+.meal-photo img{
+    width: 100%;
+    opacity: 0.7;
+    height: auto;
+   
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover{
+    transform: scale(1.03);
+    opacity: 1;
+}
+
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+/*section how it works*/
+
+.section-steps{
+    background-color: #f4f4f4;
+}
+.steps-box:first-child{     /*it will select first col inside step-box (iphone image)*/
+    text-align: right;
+    padding-right: 3%;
+    margin-top: 30px;
+    margin-left: -80px;
+}
+
+.steps-box:last-child{    /* it will select last child inside steps-box (steps 1, 2, 3)*/
+    padding-left: 3%;
+    margin-top: 70px;
+}
+
+.app-screen{
+    width: 40%;
+}
+
+.work-steps{
+    margin-bottom: 50px;
+}
+
+.work-steps div{
+    display: inline-block;
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    height: 54px;
+    width: 54px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 5px;
+    font-size: 150%;
+    line-height: 166%;
+    font-weight: 200;
+    float: left;
+    margin-right: 25px;
+}
+
+.btn-app img{
+    width: auto;
+    height: 60px;
+    margin-right: 15px;
+}
+
+/* section cities*/ 
+
+.box img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;    
+}
+
+.city-feature{
+    margin-bottom: 7px;
+}
+
+.iconsmall{
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    color: #e67e22;
+    font-size: 120%;
+    line-height: 120%;
+    vertical-align: middle;              /* to align number and text properly e.g  1 laiqqbuyde*/
+    margin-top: -4px;
+    margin-right: 10px;
+}
+
+.city-feature a:link,
+.city-feature a:visited{
+    text-decoration: none;
+    color: #e67e22;
+    border-bottom: 1px solid #e67e22;
+    padding-bottom: 1px;
+    transition: border-bottom 0.5s, color 0.5s;
+}
+
+.city-feature a:hover,
+.city-feature a:active{
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+/*section-testimonials*/
+
+.section-testimonials{
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(/resources/images/back-customers.jpg);
+    color: #ffffff;
+    background-attachment: fixed;
+}
+
+blockquote{
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    font-size: 100%;
+    position: relative;
+}
+
+blockquote::before{
+    content: "\201c";
+    font-size: 400%;
+    display: block;
+    position: absolute;
+    left: -5px;
+    top: -5px;
+}
+cite{
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+cite img{
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+/* section plans css*/
+
+.section-plans{
+    background-color: #f4f4f4;
+}
+
+.plan-box{
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;   /*trick to place div in center*/ 
+}
+
+.plan-box div{
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.plan-box ul{
+    list-style: none;
+}
+
+.plan-box ul li{
+    padding: 5px 0;
+    font-weight: 100;
+}
+.plan-price{
+    font-size: 300%;
+    font-weight: 100;
+    margin-bottom: 15px;
+    color: #e67e22;
+}
+
+.plan-price span{
+    font-size: 30%;
+    font-weight: 100;
+}
+
+.plan-price-meal{
+    font-size: 80%;
+}
+
+.plan-box div:last-child{
+    text-align: center;
+}
+
+/*section contact form*/
+.contact-form{
+    width: 60%;
+    margin-left: 20%;     /* to bring our fom in the middle*/
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea{
+    width: 100%;
+    padding: 7px;
+}
+
+input[type=submit]{
+    background-color: #e67e22;
+    border:0;
+}
+
+input[type=checkbox]{
+    height: 15px;
+    width: 15px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+*:focus{
+    outline: none;
+}
+
+/* footer section*/
+
+footer{
+    background-color: #333;
+    padding: 40px;
+}
+.footer-nav{
+    float: left;
+}
+
+.footer-icons{
+    float: right;
+}
+
+footer ul {
+    text-decoration: none;
+    list-style: none;
+    color:#888;
+}
+
+footer ul li {
+    display: inline-block;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited{
+    font-size: 80%;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active{
+    color: #ddd;
+}
+
+.footer-icons li{
+    text-decoration: none;
+    margin-right: 15px;
+    transition: color 0.2s;
+}
+
+footer li a{
+    text-decoration: none;
+    color: grey;   
+}
+
+footer li:last-child{
+    margin-right: 0;
+}
+
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instagram{
+    font-size: 120%;
+    transition: color 0.2s;
+}
+
+.ion-social-facebook:hover{
+    color: #3b5993;
+}
+
+.ion-social-twitter:hover{
+    color: #00aced;
+}
+
+.ion-social-googleplus:hover{
+    color: #d54b39;;
+}
+
+.ion-social-instagram:hover{
+    color: #517fa4;
+}
+
+.footer-text{
+    color: grey;
+    text-align: center;
+    font-size: 80%;
+    margin-top: 20px;
+}
